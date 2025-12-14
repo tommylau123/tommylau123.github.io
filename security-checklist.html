@@ -6,23 +6,29 @@
     <div class="step">
         <h4>Step 1: Open Windows Security</h4>
         <p>Go to <b>Settings → Privacy & Security → Windows Security</b></p>
-        <img src="cyber-portfolio/images/search-bar.jpg" alt="Windows Security Settings">
-        <img src="cyber-portfolio/images/privacy-security.jpg" alt="Windows Security Settings">
-        <img src="cyber-portfolio/images/windows-security.jpg" alt="Windows Security Settings">
+        <div class="image-gallery">
+            <img src="images/search-bar.jpg" alt="Windows Security Search Bar">
+            <img src="images/privacy-security.jpg" alt="Privacy & Security Settings">
+            <img src="images/windows-security.jpg" alt="Windows Security Main">
+        </div>
     </div>
 
     <!-- Step 2 -->
     <div class="step">
         <h4>Step 2: Open Firewall & Network Protection</h4>
         <p>Click on <b>Firewall & network protection</b> to see your network profiles</p>
-        <img src="cyber-portfolio/images/firewall-network-protection.jpg" alt="Firewall & Network Protection">
+        <div class="image-gallery">
+            <img src="images/firewall-network-protection.jpg" alt="Firewall & Network Protection">
+        </div>
     </div>
 
     <!-- Step 3 -->
     <div class="step">
         <h4>Step 3: Check each Network Profile</h4>
         <p>Verify that <b>Domain network</b>, <b>Private network</b>, and <b>Public network</b> all show <b>Active / On</b></p>
-        <img src="cyber-portfolio/images/firewall-status.jpg" alt="Check Network Profiles">
+        <div class="image-gallery">
+            <img src="images/firewall-status.jpg" alt="Check Network Profiles">
+        </div>
     </div>
 </div>
 
@@ -40,7 +46,7 @@
 
     .card h3 {
         font-size: 1.8em;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         color: #0b3d91;
         text-align: center;
     }
@@ -52,7 +58,7 @@
 
     .step {
         margin-top: 20px;
-        padding: 15px;
+        padding: 20px;
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -60,17 +66,30 @@
 
     .step h4 {
         font-size: 1.3em;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         color: #0b3d91;
     }
 
-    .step img {
-        display: block;
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .image-gallery img {
         max-width: 100%;
         border-radius: 8px;
-        margin: 10px 0;
         box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        flex: 1 1 calc(33% - 10px);
+    }
+
+    @media (max-width: 600px) {
+        .image-gallery img {
+            flex: 1 1 100%;
+        }
     }
 </style>
+
 
   
