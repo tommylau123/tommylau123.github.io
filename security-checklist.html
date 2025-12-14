@@ -5,12 +5,10 @@
     <div class="step">
         <h4>Step 1: Open Windows Security</h4>
         <p>Go to <b>Settings → Privacy & Security → Windows Security</b></p>
-        <div class="image-gallery step-1-gallery">
+        <div class="image-gallery">
             <img src="images/search-bar.jpg" alt="Windows Security Search Bar">
             <img src="images/privacy-security.jpg" alt="Privacy & Security Settings">
-        </div>
-        <div class="image-gallery large-image-container">
-            <img src="images/windows-security.jpg" id="windows-security-img" alt="Windows Security Main">
+            <img src="images/windows-security.jpg" alt="Windows Security Main">
         </div>
     </div>
 
@@ -77,10 +75,17 @@
         justify-content: center;
     }
 
-    /* Styling for the smaller images (Steps 2, 3, and first two in Step 1) */
     .image-gallery img {
-        max-width: 350px;
-        max-height: 300px;
+        /* *** MAJOR ADJUSTMENT: Making all images much larger *** */
+        /* Increased max-width to allow images to fill a significant portion of the card */
+        max-width: 95%; 
+        
+        /* Removed max-height constraint so the image can show its full content */
+        max-height: initial; 
+        
+        /* For images with multiple per gallery (like Step 1), we use a flex basis */
+        flex: 1 1 300px; /* Allows up to two or three images to fit side-by-side depending on total width */
+        
         width: 100%;
         height: auto;
         border-radius: 8px;
@@ -89,32 +94,13 @@
         background-color: #f0f0f0;
     }
     
-    /* NEW CSS RULE: Targets the Windows Security image specifically */
-    #windows-security-img {
-        /* Makes it much wider (up to the full card width) */
-        max-width: 95%; 
-        /* Increases the height allowance */
-        max-height: 500px; 
-        /* Forces it to take up available width */
-        flex: 1 1 100%; 
-    }
-
-    /* Layout for the first two images in Step 1 to keep them side-by-side */
-    .step-1-gallery img {
-        flex: 1 1 45%; /* Makes two images share space */
-    }
-    
-    /* Container to hold the one large image by itself */
-    .large-image-container {
-        margin-top: 15px;
-    }
+    /* For galleries with only one image (Steps 2 and 3), they will effectively take up the full 95% width. */
 
     @media (max-width: 600px) {
-        /* On small screens, all images will be full width */
-        .image-gallery img, #windows-security-img {
+        .image-gallery img {
             max-width: 100%;
-            flex: 1 1 100%;
-            max-height: initial; /* Remove height constraint on mobile */
+            flex: 1 1 100%; /* All images stack on small screens */
+            max-height: initial; 
         }
     }
 </style>
