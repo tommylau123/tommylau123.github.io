@@ -101,6 +101,89 @@
             max-width: 100%;
             flex: 1 1 100%; /* All images stack on small screens */
             max-height: initial; 
+<div class="card" id="windows-update-check">
+    <h3>Step-by-Step: Check for Windows Updates</h3>
+    <p>This quick check ensures your system has the latest security patches.</p>
+
+    <div class="step">
+        <h4>Step 1: Open Settings</h4>
+        <p>Click the **Start Button** or **Search Icon** and type "Settings," then click the app icon to open the main settings window.</p>
+        <div class="image-gallery">
+            <img src="images/search-bar.jpg" alt="Windows Search Bar used to find the Settings app.">
+        </div>
+    </div>
+
+    <div class="step">
+        <h4>Step 2: Navigate to Windows Update</h4>
+        <p>In the Settings window, click on **Windows Update** in the left-hand navigation pane.</p>
+        <div class="image-gallery">
+            <img src="images/windows-update.jpg" alt="Windows Settings window with Windows Update link highlighted on the left menu.">
+        </div>
+    </div>
+
+    <div class="step">
+        <h4>Step 3: Checking for Updates</h4>
+        <p>On the Windows Update screen, click the **Check for updates** button to begin the scan. If updates are found, they will start downloading automatically.</p>
+        <div class="image-gallery">
+            <img src="images/updates-download.jpg" alt="Windows Update screen showing a scan in progress or updates starting to download.">
+        </div>
+    </div>
+</div>
+
+<style>
+    /* ------------------------------------------------------------------ */
+    /* Base Card and Step Styling                                         */
+    /* ------------------------------------------------------------------ */
+    .card {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        padding: 25px;
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+    .card h3 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        color: #0b3d91;
+        text-align: center;
+    }
+
+    .card p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .step {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .step h4 {
+        font-size: 1.3em;
+        margin-bottom: 12px;
+        color: #0b3d91;
+    }
+
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .image-gallery img {
+        /* Formatting for large, clear visibility */
+        max-width: 95%; 
+        max-height: initial; 
+        flex: 1
         }
     }
 </style>
