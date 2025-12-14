@@ -72,21 +72,31 @@
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 10px;
+        /* Ensure the gallery centers content if there's extra space */
+        justify-content: center; 
     }
 
     .image-gallery img {
-        max-width: 100%;
+        /* *** FIX: Changed flex property for better control *** */
+        /* Each image now takes up to 300px, or 100% of the container if smaller. */
+        /* This prevents massive stretching and zooming. */
+        max-width: 300px; 
+        max-height: 250px; /* Limits vertical size, can be adjusted */
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        flex: 1 1 calc(33% - 10px);
+        /* Replaced flex: 1 1 calc(33% - 10px) with simpler max-width logic */
+        object-fit: contain; /* Ensures the whole image is visible within the max-width/height */
+        background-color: #f0f0f0; /* Optional: helps see the boundary of the image if it doesn't fill the box */
     }
 
     @media (max-width: 600px) {
         .image-gallery img {
-            flex: 1 1 100%;
+            /* On small screens, images can take up more width but are still constrained by max-width */
+            flex: 1 1 100%; 
         }
     }
 </style>
-
 
   
