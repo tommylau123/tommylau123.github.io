@@ -109,11 +109,11 @@
         justify-content: center;
     }
 
-    /* DEFAULT IMAGE FORMATTING (USED by Windows Update tutorial - Large) */
+    /* DEFAULT IMAGE FORMATTING (USED by Windows Update tutorial - NOW SMALLER) */
     .image-gallery img {
-        max-width: 95%; 
+        max-width: 350px; /* Adjusted to 350px for smaller, centered view */
         max-height: initial; 
-        flex: 1 1 300px; /* Allows large images */
+        flex: 1 1 350px; /* Allows the image to take up 350px */
         width: 100%;
         height: auto;
         border-radius: 8px;
@@ -122,10 +122,10 @@
         background-color: #f0f0f0;
     }
 
-    /* SPECIFIC STYLING for the Windows Firewall tutorial - Smaller */
+    /* SPECIFIC STYLING for the Windows Firewall tutorial - Smallest */
     .small-image-gallery img {
-        max-width: 300px; /* Reduced max-width */
-        flex: 1 1 250px; /* Allows smaller images to fit */
+        max-width: 300px; 
+        flex: 1 1 250px; 
     }
 
     @media (max-width: 600px) {
