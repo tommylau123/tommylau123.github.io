@@ -56,15 +56,11 @@
 
     /* ---------------- IMAGE LAYOUTS ---------------- */
 
-    .image-gallery.single img {
-      max-width: 700px;
-      width: 100%;
-    }
-
-    .image-gallery.grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
     }
 
     figure {
@@ -78,6 +74,19 @@
       border: 1px solid #d1d5db;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       background: #fff;
+    }
+
+    /* IMAGE SIZE CONTROLS */
+    .img-large {
+      max-width: 700px;
+    }
+
+    .img-medium {
+      max-width: 520px;
+    }
+
+    .img-small {
+      max-width: 360px;
     }
 
     figcaption {
@@ -103,7 +112,9 @@
     }
 
     @media (max-width: 600px) {
-      .image-gallery.single img {
+      .img-large,
+      .img-medium,
+      .img-small {
         max-width: 100%;
       }
     }
@@ -121,16 +132,18 @@
       <h4>Step 1: Open Windows Security</h4>
       <p>Go to <strong>Settings → Privacy & Security → Windows Security</strong>.</p>
 
-      <div class="image-gallery grid-3">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-small">
           <img src="images/search-bar.jpg" alt="Windows search bar">
           <figcaption>Search for Windows Security</figcaption>
         </figure>
-        <figure>
+
+        <figure class="img-medium">
           <img src="images/privacy-security.jpg" alt="Privacy & Security settings">
           <figcaption>Privacy & Security Settings</figcaption>
         </figure>
-        <figure>
+
+        <figure class="img-large">
           <img src="images/windows-security.jpg" alt="Windows Security dashboard">
           <figcaption>Windows Security Dashboard</figcaption>
         </figure>
@@ -141,8 +154,8 @@
       <h4>Step 2: Open Firewall & Network Protection</h4>
       <p>Select <strong>Firewall & network protection</strong>.</p>
 
-      <div class="image-gallery single">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-large">
           <img src="images/firewall-network-protection.jpg" alt="Firewall and network protection">
           <figcaption>Firewall & Network Protection Screen</figcaption>
         </figure>
@@ -153,8 +166,8 @@
       <h4>Step 3: Verify Network Profiles</h4>
       <p>Ensure all profiles show <strong>Active / On</strong>.</p>
 
-      <div class="image-gallery single">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-large">
           <img src="images/firewall-status.jpg" alt="Firewall profiles enabled">
           <figcaption>All firewall profiles enabled</figcaption>
         </figure>
@@ -173,8 +186,8 @@
       <h4>Step 1: Open Settings</h4>
       <p>Click the <strong>Start Button</strong>, type <strong>Settings</strong>, and open the app.</p>
 
-      <div class="image-gallery single">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-small">
           <img src="images/search-bar.jpg" alt="Opening Settings">
           <figcaption>Open Settings using the Start Menu</figcaption>
         </figure>
@@ -185,8 +198,8 @@
       <h4>Step 2: Navigate to Windows Update</h4>
       <p>Select <strong>Windows Update</strong> from the left menu.</p>
 
-      <div class="image-gallery single">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-large">
           <img src="images/windows-update.jpg" alt="Windows Update settings">
           <figcaption>Windows Update Screen</figcaption>
         </figure>
@@ -197,8 +210,8 @@
       <h4>Step 3: Check for Updates</h4>
       <p>Click <strong>Check for updates</strong>. Updates will install automatically.</p>
 
-      <div class="image-gallery single">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-medium">
           <img src="images/updates-download.jpg" alt="Windows updating">
           <figcaption>Updates downloading or installing</figcaption>
         </figure>
@@ -217,8 +230,8 @@
       <h4>Step 1: Open Command Prompt</h4>
       <p>Open the Start Menu, type <strong>cmd</strong>, and select <strong>Command Prompt</strong>.</p>
 
-      <div class="image-gallery single">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-small">
           <img src="images/search-bar.jpg" alt="Opening Command Prompt">
           <figcaption>Opening Command Prompt</figcaption>
         </figure>
@@ -229,8 +242,8 @@
       <h4>Step 2: List Local User Accounts</h4>
       <pre>net user</pre>
 
-      <div class="image-gallery single">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-medium">
           <img src="images/net-user.jpg" alt="CMD net user output">
           <figcaption>Local user accounts listed</figcaption>
         </figure>
@@ -241,8 +254,8 @@
       <h4>Step 3: Check Administrator Accounts</h4>
       <pre>net localgroup administrators</pre>
 
-      <div class="image-gallery single">
-        <figure>
+      <div class="image-gallery">
+        <figure class="img-medium">
           <img src="images/local-admins.jpg" alt="Administrator group output">
           <figcaption>Administrator accounts</figcaption>
         </figure>
@@ -252,6 +265,7 @@
 
 </body>
 </html>
+
 
 
   
