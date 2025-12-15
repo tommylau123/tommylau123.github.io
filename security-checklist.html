@@ -1,97 +1,257 @@
-<!-- ================= FIREWALL CHECK ================= -->
-<div class="card" id="firewall-check-step">
-  <h3>Step-by-Step: Check Windows Firewall</h3>
-  <p>Follow these steps to verify that your Windows Firewall is active:</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Computer Security Checklist</title>
 
-  <div class="step">
-    <h4>Step 1: Open Windows Security</h4>
-    <p>Go to <strong>Settings → Privacy & Security → Windows Security</strong></p>
-    <div class="image-gallery small-image-gallery">
-      <img src="images/search-bar.jpg" alt="Windows Security Search Bar">
-      <img src="images/privacy-security.jpg" alt="Privacy & Security Settings">
-      <img src="images/windows-security.jpg" alt="Windows Security Main">
+  <style>
+    body {
+      background-color: #eef1f5;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #333;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 900px;
+      margin: 40px auto;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      text-align: center;
+      font-size: 2rem;
+      color: #0b3d91;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .step {
+      margin-top: 35px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .step h4 {
+      font-size: 1.35rem;
+      color: #0b3d91;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    /* ---------------- IMAGE LAYOUTS ---------------- */
+
+    .image-gallery.single img {
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .image-gallery.grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      color: #e6e6e6;
+      padding: 16px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+    }
+
+    hr {
+      margin: 60px auto;
+      border: none;
+      border-top: 1px solid #ccc;
+      width: 60%;
+    }
+
+    @media (max-width: 600px) {
+      .image-gallery.single img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= FIREWALL CHECK ================= -->
+  <div class="card">
+    <h3>Step-by-Step: Check Windows Firewall</h3>
+    <p class="intro-text">Follow these steps to verify that your Windows Firewall is active.</p>
+
+    <div class="step">
+      <h4>Step 1: Open Windows Security</h4>
+      <p>Go to <strong>Settings → Privacy & Security → Windows Security</strong>.</p>
+
+      <div class="image-gallery grid-3">
+        <figure>
+          <img src="images/search-bar.jpg" alt="Windows search bar">
+          <figcaption>Search for Windows Security</figcaption>
+        </figure>
+        <figure>
+          <img src="images/privacy-security.jpg" alt="Privacy & Security settings">
+          <figcaption>Privacy & Security Settings</figcaption>
+        </figure>
+        <figure>
+          <img src="images/windows-security.jpg" alt="Windows Security dashboard">
+          <figcaption>Windows Security Dashboard</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="step">
+      <h4>Step 2: Open Firewall & Network Protection</h4>
+      <p>Select <strong>Firewall & network protection</strong>.</p>
+
+      <div class="image-gallery single">
+        <figure>
+          <img src="images/firewall-network-protection.jpg" alt="Firewall and network protection">
+          <figcaption>Firewall & Network Protection Screen</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="step">
+      <h4>Step 3: Verify Network Profiles</h4>
+      <p>Ensure all profiles show <strong>Active / On</strong>.</p>
+
+      <div class="image-gallery single">
+        <figure>
+          <img src="images/firewall-status.jpg" alt="Firewall profiles enabled">
+          <figcaption>All firewall profiles enabled</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
-  <div class="step">
-    <h4>Step 2: Open Firewall & Network Protection</h4>
-    <p>Click <strong>Firewall & network protection</strong> to view network profiles.</p>
-    <div class="image-gallery small-image-gallery">
-      <img src="images/firewall-network-protection.jpg" alt="Firewall & Network Protection">
+  <hr>
+
+  <!-- ================= WINDOWS UPDATE CHECK ================= -->
+  <div class="card">
+    <h3>Step-by-Step: Check for Windows Updates</h3>
+    <p class="intro-text">Keeping Windows updated ensures the latest security patches are installed.</p>
+
+    <div class="step">
+      <h4>Step 1: Open Settings</h4>
+      <p>Click the <strong>Start Button</strong>, type <strong>Settings</strong>, and open the app.</p>
+
+      <div class="image-gallery single">
+        <figure>
+          <img src="images/search-bar.jpg" alt="Opening Settings">
+          <figcaption>Open Settings using the Start Menu</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="step">
+      <h4>Step 2: Navigate to Windows Update</h4>
+      <p>Select <strong>Windows Update</strong> from the left menu.</p>
+
+      <div class="image-gallery single">
+        <figure>
+          <img src="images/windows-update.jpg" alt="Windows Update settings">
+          <figcaption>Windows Update Screen</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="step">
+      <h4>Step 3: Check for Updates</h4>
+      <p>Click <strong>Check for updates</strong>. Updates will install automatically.</p>
+
+      <div class="image-gallery single">
+        <figure>
+          <img src="images/updates-download.jpg" alt="Windows updating">
+          <figcaption>Updates downloading or installing</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
-  <div class="step">
-    <h4>Step 3: Verify Network Profiles</h4>
-    <p>Ensure <strong>Domain</strong>, <strong>Private</strong>, and <strong>Public</strong> networks all show <strong>Active / On</strong>.</p>
-    <div class="image-gallery small-image-gallery">
-      <img src="images/firewall-status.jpg" alt="Firewall status showing active networks">
+  <hr>
+
+  <!-- ================= CMD USER ACCOUNT CHECK ================= -->
+  <div class="card">
+    <h3>Check User Accounts Using Command Prompt (CMD)</h3>
+    <p class="intro-text">Review user accounts and administrator privileges on your system.</p>
+
+    <div class="step">
+      <h4>Step 1: Open Command Prompt</h4>
+      <p>Open the Start Menu, type <strong>cmd</strong>, and select <strong>Command Prompt</strong>.</p>
+
+      <div class="image-gallery single">
+        <figure>
+          <img src="images/search-bar.jpg" alt="Opening Command Prompt">
+          <figcaption>Opening Command Prompt</figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
-</div>
 
-<hr>
+    <div class="step">
+      <h4>Step 2: List Local User Accounts</h4>
+      <pre>net user</pre>
 
-<!-- ================= WINDOWS UPDATE CHECK ================= -->
-<div class="card" id="windows-update-check">
-  <h3>Step-by-Step: Check for Windows Updates</h3>
-  <p>This check ensures your system has the latest security patches.</p>
-
-  <div class="step">
-    <h4>Step 1: Open Settings</h4>
-    <p>Click the <strong>Start Button</strong> or <strong>Search Icon</strong>, type <strong>Settings</strong>, and open the app.</p>
-    <div class="image-gallery">
-      <img src="images/search-bar.jpg" alt="Opening Settings via Windows Search">
+      <div class="image-gallery single">
+        <figure>
+          <img src="images/net-user.jpg" alt="CMD net user output">
+          <figcaption>Local user accounts listed</figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
 
-  <div class="step">
-    <h4>Step 2: Navigate to Windows Update</h4>
-    <p>Select <strong>Windows Update</strong> from the left-hand menu.</p>
-    <div class="image-gallery">
-      <img src="images/windows-update.jpg" alt="Windows Update settings page">
-    </div>
-  </div>
+    <div class="step">
+      <h4>Step 3: Check Administrator Accounts</h4>
+      <pre>net localgroup administrators</pre>
 
-  <div class="step">
-    <h4>Step 3: Check for Updates</h4>
-    <p>Click <strong>Check for updates</strong>. Updates will download automatically if available.</p>
-    <div class="image-gallery">
-      <img src="images/updates-download.jpg" alt="Windows Update downloading updates">
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<!-- ================= CMD USER ACCOUNT CHECK ================= -->
-<div class="card" id="cmd-user-check">
-  <h3>Check User Accounts Using Command Prompt (CMD)</h3>
-  <p>This tutorial helps identify local user accounts and administrator privileges.</p>
-
-  <div class="step">
-    <h4>Step 1: Open Command Prompt</h4>
-    <p>Open the Start Menu, type <strong>cmd</strong>, and click <strong>Command Prompt</strong>.</p>
-    <div class="image-gallery small-image-gallery">
-      <img src="images/search-bar.jpg" alt="Opening Command Prompt">
+      <div class="image-gallery single">
+        <figure>
+          <img src="images/local-admins.jpg" alt="Administrator group output">
+          <figcaption>Administrator accounts</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
-  <div class="step">
-    <h4>Step 2: List Local User Accounts</h4>
-    <pre>net user</pre>
-    <div class="image-gallery small-image-gallery">
-      <img src="images/net-user.jpg" alt="CMD output showing user accounts">
-    </div>
-  </div>
+</body>
+</html>
 
-  <div class="step">
-    <h4>Step 3: Check Administrator Accounts</h4>
-    <pre>net localgroup administrators</pre>
-    <div class="image-gallery small-image-gallery">
-      <img src="images/local-admins.jpg" alt="CMD output showing administrator group">
-    </div>
-  </div>
-</div>
 
   
