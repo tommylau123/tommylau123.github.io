@@ -1,172 +1,97 @@
+<!-- ================= FIREWALL CHECK ================= -->
 <div class="card" id="firewall-check-step">
-    <h3>Step-by-Step: Check Windows Firewall</h3>
-    <p>Follow these steps to verify that your Windows Firewall is active:</p>
+  <h3>Step-by-Step: Check Windows Firewall</h3>
+  <p>Follow these steps to verify that your Windows Firewall is active:</p>
 
-    <div class="step">
-        <h4>Step 1: Open Windows Security</h4>
-        <p>Go to <b>Settings → Privacy & Security → Windows Security</b></p>
-        <div class="image-gallery small-image-gallery">
-            <img src="images/search-bar.jpg" alt="Windows Security Search Bar">
-            <img src="images/privacy-security.jpg" alt="Privacy & Security Settings">
-            <img src="images/windows-security.jpg" alt="Windows Security Main">
-        </div>
+  <div class="step">
+    <h4>Step 1: Open Windows Security</h4>
+    <p>Go to <strong>Settings → Privacy & Security → Windows Security</strong></p>
+    <div class="image-gallery small-image-gallery">
+      <img src="images/search-bar.jpg" alt="Windows Security Search Bar">
+      <img src="images/privacy-security.jpg" alt="Privacy & Security Settings">
+      <img src="images/windows-security.jpg" alt="Windows Security Main">
     </div>
+  </div>
 
-    <div class="step">
-        <h4>Step 2: Open Firewall & Network Protection</h4>
-        <p>Click on <b>Firewall & network protection</b> to see your network profiles</p>
-        <div class="image-gallery small-image-gallery">
-            <img src="images/firewall-network-protection.jpg" alt="Firewall & Network Protection">
-        </div>
+  <div class="step">
+    <h4>Step 2: Open Firewall & Network Protection</h4>
+    <p>Click <strong>Firewall & network protection</strong> to view network profiles.</p>
+    <div class="image-gallery small-image-gallery">
+      <img src="images/firewall-network-protection.jpg" alt="Firewall & Network Protection">
     </div>
+  </div>
 
-    <div class="step">
-        <h4>Step 3: Check each Network Profile</h4>
-        <p>Verify that <b>Domain network</b>, <b>Private network</b>, and <b>Public network</b> all show <b>Active / On</b></p>
-        <div class="image-gallery small-image-gallery">
-            <img src="images/firewall-status.jpg" alt="Check Network Profiles">
-        </div>
+  <div class="step">
+    <h4>Step 3: Verify Network Profiles</h4>
+    <p>Ensure <strong>Domain</strong>, <strong>Private</strong>, and <strong>Public</strong> networks all show <strong>Active / On</strong>.</p>
+    <div class="image-gallery small-image-gallery">
+      <img src="images/firewall-status.jpg" alt="Firewall status showing active networks">
     </div>
+  </div>
 </div>
 
 <hr>
 
+<!-- ================= WINDOWS UPDATE CHECK ================= -->
 <div class="card" id="windows-update-check">
-    <h3>Step-by-Step: Check for Windows Updates</h3>
-    <p>This quick check ensures your system has the latest security patches.</p>
+  <h3>Step-by-Step: Check for Windows Updates</h3>
+  <p>This check ensures your system has the latest security patches.</p>
 
-    <div class="step">
-        <h4>Step 1: Open Settings</h4>
-        <p>Click the **Start Button** or **Search Icon** and type "Settings," then click the app icon to open the main settings window.</p>
-        <div class="image-gallery">
-            <img src="images/search-bar.jpg" alt="Windows Search Bar used to find the Settings app.">
-        </div>
+  <div class="step">
+    <h4>Step 1: Open Settings</h4>
+    <p>Click the <strong>Start Button</strong> or <strong>Search Icon</strong>, type <strong>Settings</strong>, and open the app.</p>
+    <div class="image-gallery">
+      <img src="images/search-bar.jpg" alt="Opening Settings via Windows Search">
     </div>
+  </div>
 
-    <div class="step">
-        <h4>Step 2: Navigate to Windows Update</h4>
-        <p>In the Settings window, click on **Windows Update** in the left-hand navigation pane.</p>
-        <div class="image-gallery">
-            <img src="images/windows-update.jpg" alt="Windows Settings window with Windows Update link highlighted on the left menu.">
-        </div>
+  <div class="step">
+    <h4>Step 2: Navigate to Windows Update</h4>
+    <p>Select <strong>Windows Update</strong> from the left-hand menu.</p>
+    <div class="image-gallery">
+      <img src="images/windows-update.jpg" alt="Windows Update settings page">
     </div>
+  </div>
 
-    <div class="step">
-        <h4>Step 3: Checking for Updates</h4>
-        <p>On the Windows Update screen, click the **Check for updates** button to begin the scan. If updates are found, they will start downloading automatically.</p>
-        <div class="image-gallery">
-            <img src="images/updates-download.jpg" alt="Windows Update screen showing a scan in progress or updates starting to download.">
-        </div>
+  <div class="step">
+    <h4>Step 3: Check for Updates</h4>
+    <p>Click <strong>Check for updates</strong>. Updates will download automatically if available.</p>
+    <div class="image-gallery">
+      <img src="images/updates-download.jpg" alt="Windows Update downloading updates">
     </div>
+  </div>
 </div>
 
-<style>
-    /* ------------------------------------------------------------------ */
-    /* Base Card and Step Styling (Applies to both tutorials)             */
-    /* ------------------------------------------------------------------ */
-    .card {
-        background-color: #f9f9f9;
-        border-radius: 12px;
-        padding: 25px;
-        max-width: 800px;
-        margin: 20px auto;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #333;
-    }
+<hr>
 
-    .card h3 {
-        font-size: 1.8em;
-        margin-bottom: 15px;
-        color: #0b3d91;
-        text-align: center;
-    }
+<!-- ================= CMD USER ACCOUNT CHECK ================= -->
+<div class="card" id="cmd-user-check">
+  <h3>Check User Accounts Using Command Prompt (CMD)</h3>
+  <p>This tutorial helps identify local user accounts and administrator privileges.</p>
 
-    .card p {
-        font-size: 1em;
-        line-height: 1.6;
-    }
+  <div class="step">
+    <h4>Step 1: Open Command Prompt</h4>
+    <p>Open the Start Menu, type <strong>cmd</strong>, and click <strong>Command Prompt</strong>.</p>
+    <div class="image-gallery small-image-gallery">
+      <img src="images/search-bar.jpg" alt="Opening Command Prompt">
+    </div>
+  </div>
 
-    .step {
-        margin-top: 20px;
-        padding: 20px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
+  <div class="step">
+    <h4>Step 2: List Local User Accounts</h4>
+    <pre>net user</pre>
+    <div class="image-gallery small-image-gallery">
+      <img src="images/net-user.jpg" alt="CMD output showing user accounts">
+    </div>
+  </div>
 
-    .step h4 {
-        font-size: 1.3em;
-        margin-bottom: 12px;
-        color: #0b3d91;
-    }
+  <div class="step">
+    <h4>Step 3: Check Administrator Accounts</h4>
+    <pre>net localgroup administrators</pre>
+    <div class="image-gallery small-image-gallery">
+      <img src="images/local-admins.jpg" alt="CMD output showing administrator group">
+    </div>
+  </div>
+</div>
 
-    .image-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-        justify-content: center;
-    }
-
-    /* DEFAULT IMAGE FORMATTING (USED by Windows Update tutorial - NOW SMALLER) */
-    .image-gallery img {
-        max-width: 350px; /* Adjusted to 350px for smaller, centered view */
-        max-height: initial; 
-        flex: 1 1 350px; /* Allows the image to take up 350px */
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        object-fit: contain;
-        background-color: #f0f0f0;
-    }
-
-    /* SPECIFIC STYLING for the Windows Firewall tutorial - Smallest */
-    .small-image-gallery img {
-        max-width: 300px; 
-        flex: 1 1 250px; 
-    }
-
-    @media (max-width: 600px) {
-        .image-gallery img, .small-image-gallery img {
-            max-width: 100%;
-            flex: 1 1 100%; /* All images stack on small screens */
-            max-height: initial; 
-        }
-    }
-    
-    hr {
-        margin: 40px auto;
-        border: 0;
-        border-top: 1px solid #ccc;
-        width: 50%;
-        <section class="security-tutorial">
-  <h2>Check User Accounts Using Command Prompt (CMD)</h2>
-
-  <p>This tutorial shows how to identify user accounts and administrator privileges.</p>
-
-  <h3>Step 1: Open Command Prompt</h3>
-  <p>Open the Start Menu, type <strong>cmd</strong>, and click Command Prompt.</p>
-
-  <img src="images/search-bar.jpg" alt="Opening Command Prompt">
-  <p class="img-caption">Opening Command Prompt</p>
-
-  <h3>Step 2: List User Accounts</h3>
-  <pre>net user</pre>
-
-  <img src="images/net-user.jpg" alt="Listing user accounts">
-  <p class="img-caption">Listing local user accounts</p>
-
-  <h3>Step 3: Check Administrator Accounts</h3>
-  <pre>net localgroup administrators</pre>
-
-  <img src="images/local-admins.jpg" alt="Administrator accounts">
-  <p class="img-caption">Viewing administrator group</p>
-
-  
-</section>
-
-    }
-</style>
   
